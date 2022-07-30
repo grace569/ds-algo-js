@@ -1,4 +1,4 @@
-//iterative approach 
+//iterative approach (leetcode accepted)
 
 /**
  * Definition for singly-linked list.
