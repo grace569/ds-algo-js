@@ -45,3 +45,27 @@ var mergeTwoLists = function(list1, list2) {
     
     return result.next;
 };
+
+
+//recursive approach (leetcode accepted)
+
+var mergeTwoListsRecursive = function(list1, list2) {
+    //base case
+    if(list1 === null) {
+        return list2;
+    }
+    if(list2 === null) {
+        return list1;
+    }
+    
+    //recursion
+    if(list1.val < list2.val) {
+        let result = list1;
+        result.next = mergeTwoLists(list1.next, list2);
+        return result;
+    } else {
+        let result = list2;
+        result.next = mergeTwoLists(list1, list2.next);
+        return result;
+    }
+};
